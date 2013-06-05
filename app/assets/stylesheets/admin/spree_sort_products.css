@@ -1,3 +1,6 @@
 /*
  *= require admin/spree_core
 */
+ul#products {
+  margin-top: 1em;
+}
