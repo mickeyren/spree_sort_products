@@ -8,7 +8,8 @@
 
 <div id="ajax_error" class="errorExplanation" style="display:none;"></div>
 <% content_for :page_actions do %>
-  <%= form_for [:update_products, :admin, @taxonomy, @taxon], :method => :post do |f| %>
+  <% form_url = update_products_admin_taxonomy_taxon_path(@taxonomy.id, @taxon.id) %>
+  <%= form_for [:update_products, :admin, @taxonomy, @taxon], :url => form_url, :method => :post do |f| %>
     <%= hidden_field_tag :taxon_id, @taxon_id %>
     <%= hidden_field_tag :product_positions, 0 %>
 
